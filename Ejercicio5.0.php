@@ -1,20 +1,20 @@
 <?php
     session_unset();
+    $color = $_POST['color'];
+    $fuente = $_POST['fuente'];
+    $tamanyo = $_POST['tamanyo'];
+    $colorp = $_POST['color'];
+    $fuentep = $_POST['fuente'];
+    $tamanyop = $_POST['tamanyo'];
     if (isset($_POST['coockie'])){
         $coockie = $_POST['coockie'];
+        setcookie("color",$color,time()+600);
+        setcookie("fuente",$fuente,time()+600);
+        setcookie("tamanyo",$tamanyo,time()+600); 
     }
     else{
         $coockie = 0;
     }
-    $color = $_POST['color'];
-    $fuente = $_POST['fuente'];
-    $tamanyo = $_POST['tamanyo'];
-    setcookie("color",$color,time()+600);
-    setcookie("fuente",$fuente,time()+600);
-    setcookie("tamanyo",$tamanyo,time()+600); 
-    $colorp = $_POST['color'];
-    $fuentep = $_POST['fuente'];
-    $tamanyop = $_POST['tamanyo']
 ?>
 
 
